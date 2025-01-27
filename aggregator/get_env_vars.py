@@ -1,0 +1,8 @@
+from dotenv import load_dotenv
+import os
+
+def load_environment_variables():
+    # Try root path first
+    root_path = os.path.join(os.path.dirname(__file__), ".env")
+    if os.path.exists(root_path):
+        load_dotenv(root_path)
